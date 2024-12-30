@@ -1,0 +1,128 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#app {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#container {
+    width: 100%;
+    height: 100%;
+    position: absolute !important;
+    top: 0;
+    left: 0;
+}
+
+.input-card {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 999;
+    background: #fff;
+    padding: 15px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    width: 300px;
+}
+
+#panel {
+    position: absolute;
+    top: 150px;
+    left: 20px;
+    z-index: 999;
+    background: #fff;
+    max-height: calc(100% - 170px);
+    overflow-y: auto;
+    width: 300px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.input-item {
+    margin-bottom: 15px;
+}
+
+.input-item label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-item input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.btn-group {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    flex: 1;
+    padding: 8px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+/* 添加导航面板样式 */
+.route-info {
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.route-info h3 {
+    margin: 0 0 10px 0;
+    color: #333;
+}
+
+.route-steps {
+    padding: 15px;
+}
+
+.step {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.step-number {
+    background: #007bff;
+    color: white;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+.step-instruction {
+    flex: 1;
+}
+
+.step-distance {
+    color: #666;
+    font-size: 13px;
+} 

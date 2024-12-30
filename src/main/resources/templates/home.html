@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>救护车智能调度系统</title>
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+<body>
+
+<div class="container">
+    <!-- 上方区域 -->
+    <header class="header">
+        <div class="logo">
+            <img src="LOGO.png" alt="Logo" />
+        </div>
+        <div class="top-right">
+            <button class="btn" id="loginBtn">登录</button>
+            <button class="btn" id="emergencyBtn">紧急求助</button>
+        </div>
+    </header>
+    <div class="main-content">
+        <!-- 左侧区域（导航栏） -->
+        <nav class="sidebar">
+            <ul>
+                <li><div class="left home" >首页</div> </li>
+                <li><div class="left" id="ambulanceManagementBtn">救护车管理</div></li>
+                <li><div class="left">事故报告</div> </li>
+                <li><div class="left" onclick="window.location.href='/traffic'">城市交通</div></li>
+            </ul>
+        </nav>
+        <!-- 右侧区域 -->
+        <div class="right-side" id="ambulanceManagementContent">
+            <h1>欢迎使用救护车智能调度系统！</h1>
+            <!-- 动态内容将在这里展示 -->
+            <div class="search-section">
+                <select id="statusFilter" class="form-select">
+                    <option value="">全部状态</option>
+                    <option value="执行任务中">执行任务中</option>
+                    <option value="待班中">待班中</option>
+                    <option value="维修中">维修中</option>
+                </select>
+                
+                <input type="text" id="plateNumberSearch" class="form-control" 
+                       placeholder="输入车牌号搜索">
+                
+                <button id="searchBtn" class="search-btn">搜索</button>
+            </div>
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>车牌号</th>
+                        <th>状态</th>
+                        <th>司机信息</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody id="ambulanceTableBody">
+                    <!-- 数据将通过 JavaScript 动态填充 -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script src="/js/home.js"></script>
+</body>
+</html>

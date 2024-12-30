@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>城市交通</title>
+    <!-- 引入高德地图API和必要的插件 -->
+    <link rel="stylesheet" href="https://cache.amap.com/lbs/static/main1119.css"/>
+    <script type="text/javascript">
+        window._AMapSecurityConfig = {
+            securityJsCode: 'de59d11899a8d566ebf25b9a591917e3'
+        }
+    </script>
+    <script type="text/javascript" src="https://webapi.amap.com/maps?v=2.0&key=1a691a300cc47c58a8e64912ac332eb8&plugin=AMap.Scale,AMap.ToolBar"></script>
+    <!-- 引入 Vue 3 生产版本 -->
+    <script src="https://unpkg.com/vue@3.2.36/dist/vue.global.prod.js"></script>
+    <link rel="stylesheet" href="/css/traffic.css">
+</head>
+<body>
+    <div id="app">
+        <div id="container"></div>
+        <div class="input-card">
+            <div class="input-item">
+                <label>起点</label>
+                <input type="text" v-model="startPoint" placeholder="请输入起点">
+            </div>
+            <div class="input-item">
+                <label>终点</label>
+                <input type="text" v-model="endPoint" placeholder="请输入终点">
+            </div>
+            <div class="btn-group">
+                <button @click="planRoute">路线规划</button>
+                <button @click="clearRoute">清除路线</button>
+            </div>
+        </div>
+        <div id="panel"></div>
+    </div>
+
+    <script src="/js/traffic.js"></script>
+</body>
+</html> 
